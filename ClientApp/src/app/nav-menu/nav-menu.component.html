@@ -2,6 +2,10 @@
     <div class='navbar navbar-inverse'>
         <div class='clearfix'></div>
         <div class='navbar-collapse collapse navbar-links' [ngClass]='{ "in": isExpanded }'>
+            <!-- <div style="float: right; color: white; margin-right: 5px; cursor:pointer;" (click)='toggle()'>
+                <<
+            </div> -->
+            <div class="clearfix"></div>
             <ul class='nav navbar-nav'>
                 <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
                     <a [routerLink]='["/"]' (click)='collapse()'>
