@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { BodyContainerComponent } from './body-container/body-container.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    NavBarComponent
+    NavBarComponent,
+    BodyContainerComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

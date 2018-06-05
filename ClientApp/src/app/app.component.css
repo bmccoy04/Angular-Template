@@ -4,3 +4,8 @@
     padding-top: 50px;
   }
 }
+
+.container-fluid {
+  margin-right:auto;
+  margin-left:auto
+}
