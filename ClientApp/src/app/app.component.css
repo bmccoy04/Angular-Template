@@ -9,3 +9,7 @@
   margin-right:auto;
   margin-left:auto
 }
+
+.bg-light {
+  background-color: blue !important;
+}

@@ -11,6 +11,8 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { BodyContainerComponent } from './body-container/body-container.component';
+import { SiteHeaderComponent } from './site-header/site-header.component';
+import { NavCardComponent } from './nav-card/nav-card.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { BodyContainerComponent } from './body-container/body-container.componen
     CounterComponent,
     FetchDataComponent,
     NavBarComponent,
-    BodyContainerComponent
+    BodyContainerComponent,
+    SiteHeaderComponent,
+    NavCardComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
