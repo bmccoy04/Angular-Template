@@ -5,14 +5,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { NavMenuComponent } from './navigation/nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { NavBarComponent } from './navigation/nav-bar/nav-bar.component';
 import { BodyContainerComponent } from './body-container/body-container.component';
 import { SiteHeaderComponent } from './site-header/site-header.component';
-import { NavCardComponent } from './nav-card/nav-card.component';
+import { NavCardComponent } from './navigation/nav-card/nav-card.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +32,8 @@ import { NavCardComponent } from './nav-card/nav-card.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'Counter', component: CounterComponent },
+      { path: 'Fetch-Data', component: FetchDataComponent },
     ])
   ],
   providers: [],
