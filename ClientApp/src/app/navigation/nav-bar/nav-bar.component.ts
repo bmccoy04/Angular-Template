@@ -13,13 +13,13 @@ path: string;
 
   constructor(private location: Location, private router: Router) {
       this.router.events.subscribe((event) => {
-        if(event instanceof NavigationEnd) {
+        if (event instanceof NavigationEnd) {
           const route = this.router.url.slice(1);
           console.log(route);
-          if(route === '') {
-            this.path = "Home";
+          if (route === '') {
+            this.path = 'Home';
           } else {
-            this.path = "< " + route;
+            this.path = '< ' + route;
           }
         }
       });
@@ -30,6 +30,8 @@ path: string;
   }
 
   goBack() {
-    this.location.back();
+    if (this.path !== 'Home') {
+      this.location.back();
+    }
   }
 }

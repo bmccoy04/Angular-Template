@@ -11,6 +11,7 @@ export class NavCardComponent implements OnInit {
   @Input() text: string;
   @Input() route: string;
   @Input() linkText: string;
+  @Input() icon: string;
 
   Something: string;
 

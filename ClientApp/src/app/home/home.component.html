@@ -1,20 +1,23 @@
-<div class="text-center" style="height: 100%; width:80%; margin: auto">
+<div class="text-center" style="height: 100%; width:80%; margin: auto;">
   <app-nav-card 
     [title]="'Home'"
-    [text]="'The main ladning page of the application.'"
+    [text]="'The main landing page of the application.'"
     [linkText]="'Go Home'"
     [route]="'/'"
+    [icon]="'home'"
   ></app-nav-card>
   <app-nav-card 
     [title]="'Counter'"
     [text]="'Provides a button to increase a count.'"
     [linkText]="'Counter'"
     [route]="'/Counter'"
+    [icon]="'plus'"
   ></app-nav-card>
    <app-nav-card 
     [title]="'Fetch-Data'"
     [text]="'Fetches data and displays it to the user'"
     [linkText]="'Go Fetch Data'"
     [route]="'/Fetch-Data'"
+    [icon]="'database'"
   ></app-nav-card>  
 </div>
