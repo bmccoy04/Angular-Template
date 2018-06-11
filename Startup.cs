@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace Angular_Template
 {
@@ -19,6 +20,7 @@ namespace Angular_Template
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddLogging(configure => configure.AddConsole());
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
