@@ -1,23 +1,21 @@
-<div class='main-nav'>
-    <div class='navbar-dark bg-dark' style="height: 100%;">
-        <div>
-            <ul class="nav flex-column nav-pills">
-                <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
-                    <a class="nav-link" [routerLink]='["/"]' (click)='collapse()'>
-                        <span class='glyphicon glyphicon-home'></span> Home
+<div>
+    <div class='navbar bg-white'>
+            <ul class="nav flex-column nav-pills nav-fill" style="width: 100%;">
+                <li class="nav-item" >
+                    <a class="nav-link" [routerLinkActive]='["active"]' [routerLinkActiveOptions]='{ exact: true }' [routerLink]='["/"]'>
+                        Home
                     </a>
                 </li>
-                <li class="nav-item" [routerLinkActive]='["link-active"]'>
-                    <a class="nav-link" [routerLink]='["/counter"]' (click)='collapse()'>
-                        <span class='glyphicon glyphicon-education'></span> Counter
+                <li class="nav-item" >
+                    <a class="nav-link" [routerLinkActive]='["active"]' [routerLink]='["/Counter"]'>
+                        Counter
                     </a>
                 </li>
-                <li class="nav-item" [routerLinkActive]='["link-active"]'>
-                    <a class="nav-link" [routerLink]='["/fetch-data"]' (click)='collapse()'>
-                        <span class='glyphicon glyphicon-th-list'></span> Fetch data
+                <li class="nav-item" >
+                    <a class="nav-link" [routerLinkActive]='["active"]' [routerLink]='["/Fetch-Data"]'>
+                        Fetch data
                     </a>
                 </li>
             </ul>
-        </div>
     </div>
 </div>

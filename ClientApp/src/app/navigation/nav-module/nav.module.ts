@@ -5,8 +5,9 @@ import { HomeComponent } from '../../home/home.component';
 import { CounterComponent } from '../../counter/counter.component';
 import { FetchDataComponent } from '../../fetch-data/fetch-data.component';
 
-import { NavMenuComponent } from '../nav-menu/nav-menu.component';
+
 import { NavCardComponent } from '../nav-card/nav-card.component';
+
 
 
 const routes: Routes = [
@@ -24,7 +25,6 @@ const routes: Routes = [
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    NavMenuComponent,
     NavCardComponent
   ]
 })

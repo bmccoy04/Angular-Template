@@ -10,14 +10,15 @@ import { AppComponent } from './app.component';
 import { BodyContainerComponent } from './body-container/body-container.component';
 import { SiteHeaderComponent } from './site-header/site-header.component';
 import { NavBarComponent } from './navigation/nav-bar/nav-bar.component';
-
+import { NavMenuComponent } from './navigation/nav-menu/nav-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BodyContainerComponent,
     SiteHeaderComponent,
-    NavBarComponent
+    NavBarComponent,
+    NavMenuComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

@@ -10,6 +10,7 @@ import { Location } from '@angular/common';
 export class NavBarComponent implements OnInit {
 
 path: string;
+showNav = false;
 
   constructor(private location: Location, private router: Router) {
       this.router.events.subscribe((event) => {
@@ -27,6 +28,10 @@ path: string;
 
   ngOnInit() {
 
+  }
+
+  toggleNav() {
+    this.showNav = !this.showNav;
   }
 
   goBack() {
