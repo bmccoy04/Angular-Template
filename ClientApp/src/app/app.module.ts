@@ -11,6 +11,9 @@ import { BodyContainerComponent } from './body-container/body-container.componen
 import { SiteHeaderComponent } from './site-header/site-header.component';
 import { NavBarComponent } from './navigation/nav-bar/nav-bar.component';
 import { NavMenuComponent } from './navigation/nav-menu/nav-menu.component';
+import { SpinnerModule } from './spinner/spinner-module/spinner.module';
+import { SpinnerService } from './spinner/spinner.service';
+import { SpinnerComponent } from './spinner/spinner-component/spinner.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +29,10 @@ import { NavMenuComponent } from './navigation/nav-menu/nav-menu.component';
     FormsModule,
     NavModule,
     RouterModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    SpinnerModule
   ],
-  providers: [],
+  providers: [SpinnerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

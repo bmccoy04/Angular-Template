@@ -1,11 +1,16 @@
 <nav class="navbar navbar-dark bg-primary" style="padding: 0 15px 0 15px">
-    <h3 class="navbar-brand" (click)="goBack()"  style="cursor: pointer;">{{path}}</h3>
+    <h3 class="navbar-brand" (click)="goBack()" style="cursor: pointer;">{{path}}</h3>
     <div class="fa fa-bars navbar-text" (click)="toggleNav()" style="cursor: pointer;">
-    </div>                
+    </div>
 </nav>
-<div class="bg-white border-left" style="position: fixed; top: 0; right: 0; height: 100%; width: 250px; background-color:red;" *ngIf="showNav">
+<div class="bg-white border-left" style="position: fixed; z-index: 100; top: 0; right: 0; height: 100%; width: 250px; background-color:red;"
+    *ngIf="showNav">
     <span (click)="toggleNav()">
         <i class="fa fa-arrow-circle-right text-secondary" style="cursor: pointer; margin: 10px 10px 10px 10px"></i>
         <app-nav-menu></app-nav-menu>
     </span>
+</div>
+<div class="bg-secondary" style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; opacity: 0.3; z-index: 50;"
+    *ngIf="showNav">
+
 </div>
