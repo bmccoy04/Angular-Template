@@ -7,6 +7,8 @@ import { FetchDataComponent } from '../../fetch-data/fetch-data.component';
 
 
 import { NavCardComponent } from '../nav-card/nav-card.component';
+import { NavMenuComponent } from '../nav-menu/nav-menu.component';
+import { NavBarComponent } from '../nav-bar/nav-bar.component';
 
 
 
@@ -25,7 +27,12 @@ const routes: Routes = [
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    NavCardComponent
+    NavCardComponent,
+    NavMenuComponent,
+    NavBarComponent
+  ],
+  exports: [
+    NavBarComponent
   ]
 })
 export class NavModule { }

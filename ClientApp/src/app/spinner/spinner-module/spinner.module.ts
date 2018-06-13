@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SpinnerComponent } from '../spinner-component/spinner.component';
+import { SpinnerService } from '../spinner.service';
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import { SpinnerComponent } from '../spinner-component/spinner.component';
     SpinnerComponent
   ],
   providers: [
+    SpinnerService
   ],
   exports: [
     SpinnerComponent

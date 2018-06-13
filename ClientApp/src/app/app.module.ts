@@ -9,19 +9,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { BodyContainerComponent } from './body-container/body-container.component';
 import { SiteHeaderComponent } from './site-header/site-header.component';
-import { NavBarComponent } from './navigation/nav-bar/nav-bar.component';
-import { NavMenuComponent } from './navigation/nav-menu/nav-menu.component';
 import { SpinnerModule } from './spinner/spinner-module/spinner.module';
-import { SpinnerService } from './spinner/spinner.service';
-import { SpinnerComponent } from './spinner/spinner-component/spinner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BodyContainerComponent,
-    SiteHeaderComponent,
-    NavBarComponent,
-    NavMenuComponent
+    SiteHeaderComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -32,7 +26,7 @@ import { SpinnerComponent } from './spinner/spinner-component/spinner.component'
     NgbModule.forRoot(),
     SpinnerModule
   ],
-  providers: [SpinnerService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
