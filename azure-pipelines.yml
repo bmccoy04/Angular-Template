@@ -19,5 +19,5 @@ steps:
 - script: npm install ClientApp/
   displayName: 'npm install'
 
-- script: ng build
+- script: npm --prefix ClientApp/ run build
   displayName: 'ng build'
