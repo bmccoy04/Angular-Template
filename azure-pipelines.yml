@@ -16,6 +16,8 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
-- script: cd ClientApp
-- script: npm install
+- script: npm install ClientApp/
+  displayName: 'npm install'
+
 - script: ng build
+  displayName: 'ng build'
