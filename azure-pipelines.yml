@@ -22,5 +22,5 @@ steps:
 #- script: npm install --save-dev @angular/cli
 #  displayName: 'install angular cli'
 
-#- script: npm --prefix ClientApp/ run build
-#  displayName: 'ng build'
+- script: npm --prefix ClientApp/ run build
+  displayName: 'ng build'
