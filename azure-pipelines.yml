@@ -14,8 +14,8 @@ jobs:
     - script: dotnet build --configuration Release
       displayName: 'dotnet build Release'
 
-    - script: npm --prefix .\ClientApp\ install 
+    - script: npm --prefix .\ClientApp\package.json install 
       displayName: 'npm install'
 
-    - script: npm --prefix .\ClientApp\ run build
+    - script: npm --prefix .\ClientApp\package.json run build
       displayName: 'ng build'
