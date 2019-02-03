@@ -4,23 +4,14 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 jobs:
-- job: Linux
-  pool:
-    vmImage: 'ubuntu-16.04'
-  steps:
-    - script: dotnet build --configuration Release
-      displayName: 'dotnet build Release'
 
-    - script: npm --prefix ClientApp/ install 
-      displayName: 'npm install'
-
-    - script: npm --prefix ClientApp/ run build
-      displayName: 'ng build'
-    
 - job: macOS
   pool:
     vmImage: 'macOS-10.13'
   steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '8.2.0'
     - script: dotnet build --configuration Release
       displayName: 'dotnet build Release'
 
