@@ -3,24 +3,43 @@
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
-trigger:
-- master
+jobs:
+- job: Linux
+  pool:
+    vmImage: 'ubuntu-16.04'
+  steps:
+    - script: dotnet build --configuration $(buildConfiguration)
+      displayName: 'dotnet build $(buildConfiguration)'
 
-pool:
-  vmImage: 'Ubuntu-16.04'
-
-variables:
-  buildConfiguration: 'Release'
-
-steps:
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
-
-- script: npm --prefix ClientApp/ install 
-  displayName: 'npm install'
+    - script: npm --prefix ClientApp/ install 
+      displayName: 'npm install'
 
 #- script: npm install --save-dev @angular/cli
 #  displayName: 'install angular cli'
 
-- script: npm --prefix ClientApp/ run build
-  displayName: 'ng build'
+    - script: npm --prefix ClientApp/ run build
+      displayName: 'ng build'
+    
+
+
+#trigger:
+#- master
+
+#pool:
+#  vmImage: 'Ubuntu-16.04'
+
+#variables:
+#  buildConfiguration: 'Release'
+
+#steps:
+#- script: dotnet build --configuration $(buildConfiguration)
+ # displayName: 'dotnet build $(buildConfiguration)'
+
+#- script: npm --prefix ClientApp/ install 
+#  displayName: 'npm install'
+
+#- script: npm install --save-dev @angular/cli
+#  displayName: 'install angular cli'
+
+#- script: npm --prefix ClientApp/ run build
+ # displayName: 'ng build'
