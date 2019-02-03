@@ -14,32 +14,31 @@ jobs:
     - script: npm --prefix ClientApp/ install 
       displayName: 'npm install'
 
-#- script: npm install --save-dev @angular/cli
-#  displayName: 'install angular cli'
-
     - script: npm --prefix ClientApp/ run build
       displayName: 'ng build'
     
+- job: macOS
+  pool:
+    vmImage: 'macOS-10.13'
+  steps:
+    - script: dotnet build --configuration Release
+      displayName: 'dotnet build Release'
 
+    - script: npm --prefix ClientApp/ install 
+      displayName: 'npm install'
 
-#trigger:
-#- master
+    - script: npm --prefix ClientApp/ run build
+      displayName: 'ng build'
 
-#pool:
-#  vmImage: 'Ubuntu-16.04'
+- job: Windows
+  pool:
+    vmImage: 'vs2017-win2016'
+  steps:
+    - script: dotnet build --configuration Release
+      displayName: 'dotnet build Release'
 
-#variables:
-#  buildConfiguration: 'Release'
+    - script: npm --prefix ClientApp/ install 
+      displayName: 'npm install'
 
-#steps:
-#- script: dotnet build --configuration $(buildConfiguration)
- # displayName: 'dotnet build $(buildConfiguration)'
-
-#- script: npm --prefix ClientApp/ install 
-#  displayName: 'npm install'
-
-#- script: npm install --save-dev @angular/cli
-#  displayName: 'install angular cli'
-
-#- script: npm --prefix ClientApp/ run build
- # displayName: 'ng build'
+    - script: npm --prefix ClientApp/ run build
+      displayName: 'ng build'
