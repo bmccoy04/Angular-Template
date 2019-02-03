@@ -17,5 +17,5 @@ jobs:
     - script: npm install .\ClientApp\
       displayName: 'npm install'
 
-    - script: npm run build .\ClientApp\
+    - script:  npm --prefix .\ClientApp\ run-script build
       displayName: 'ng build'
